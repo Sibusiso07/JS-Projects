@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Weather API</title>
+</head>
+<body>
+    <h1>City Weather App</h1>
+    <div class="container">
+        <div class="response-area">
+            <!-- display data -->
+            <% if (locals.weatherData) { %>
+                <p>
+                    <%= weatherData.temp %>
+                    <%= weatherData.type %>
+                    <%= weatherData.humidity %>
+                    <%= weatherData.speed %>
+                    <%= weatherData.gust %>
+                </p>
+            <% } %>
+        </div>
+        <form id="myForm">
+            <label for="chosenCity">City:</label>
+            <input type="text" id="chosenCity" name="city">
+
+            <label for="submit">Search: </label>
+            <input id="get" type="submit" value="SEARCH" formaction="/result">
+        </form>
+    </div>
+</body>
+</html>
