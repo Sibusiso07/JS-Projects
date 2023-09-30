@@ -56,3 +56,19 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #357ABD; /* Darker blue color on hover */
 }
+
+.response-area p {
+    text-align: center; 
+    font-size: 18px; 
+    color: #333; 
+    margin: 0; 
+}
+
+.response-area h3 {
+    text-align: center;
+}
+
+.response-area p small {
+    font-size: 14px; 
+    color: #666; 
+}

@@ -11,15 +11,18 @@
     <div class="container">
         <div class="response-area">
             <!-- display data -->
-            <% if (locals.weatherData) { %>
-                <p>
-                    <%= weatherData.temp %>
-                    <%= weatherData.type %>
-                    <%= weatherData.humidity %>
-                    <%= weatherData.speed %>
-                    <%= weatherData.gust %>
-                </p>
+            <% if (locals.location) { %>
+                <h3><%= location %></h3>
+            <% } else { %>
+                <h3>Sandton</h3>
             <% } %>
+                <p>
+                    Temperature: <%= tempData %>°C<br>
+                    Type: <%= typeData %> skies<br>
+                    Humidify: <%= humidityData %>%<br>
+                    Wind: <%= windSpeed %><br>
+                    Date: <small><%= new Date().toJSON().slice(0, 10); %></small>
+                </p>
         </div>
         <form id="myForm">
             <label for="chosenCity">City:</label>
